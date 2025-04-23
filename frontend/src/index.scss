@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+button {
+    outline: 0;
+    border: 0;
+    background: 0;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+        transition: all 0.2s linear;
+        outline: 1px #000 solid;
+        background: #000;
+        color: #fff;
+    }
+}
