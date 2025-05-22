@@ -31,6 +31,7 @@ let UserController = class UserController {
         return this.userService.generateToken(user);
     }
     async authRegister(dto) {
+        console.log(dto);
         const user = await this.userService.register(dto);
         return this.userService.generateToken(user);
     }

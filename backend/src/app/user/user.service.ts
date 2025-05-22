@@ -52,6 +52,8 @@ export class UserService {
   }
 
   async register(dto: UserCreateDto): Promise<UserDto> {
+    console.log(dto);
+
     const login = String(dto.login).toLowerCase();
 
     const existingUserEntity = await this.manager.findOneBy(UserEntity, {

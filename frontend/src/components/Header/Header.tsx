@@ -5,16 +5,32 @@ const Header = () => {
     const navigate = useNavigate();
     return (
         <header className={styles.container}>
-            <nav className={styles.nav}>
-                <button onClick={() => navigate("/")}>Главная страница</button>
-                <button onClick={() => navigate("/stuff")}>
-                    Страница товаров
-                </button>
-                <button onClick={() => navigate("/login")}>Логин</button>
-                <button onClick={() => navigate("/register")}>
-                    Регистрация
-                </button>
-            </nav>
+            <article className={styles.article}>
+                <nav className={styles.nav}>
+                    <ul className={styles.menu}>
+                        <li>
+                            <button onClick={() => navigate("/")}>
+                                Главная страница
+                            </button>
+                        </li>
+                        <li>
+                            <button onClick={() => navigate("/stuff")}>
+                                Страница товаров
+                            </button>
+                        </li>
+                        <li>
+                            <button onClick={() => navigate("/login")}>
+                                Логин
+                            </button>
+                        </li>
+                        <li>
+                            <button onClick={() => navigate("/register")}>
+                                Регистрация
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
         </header>
     );
 };

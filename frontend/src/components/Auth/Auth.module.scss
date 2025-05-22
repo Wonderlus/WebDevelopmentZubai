@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #e3c7a8 0%, #f5f5dc 100%);
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        input {
+            width: 200px;
+            outline: 0;
+            border: 0;
+            background: 0;
+            border-bottom: 1px solid #000;
+
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+    }
+}

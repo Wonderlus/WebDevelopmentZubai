@@ -22,6 +22,7 @@ export class UserController {
 
   @Post('register')
   async authRegister(@Body() dto: UserCreateDto) {
+    console.log(dto);
     const user = await this.userService.register(dto);
     return this.userService.generateToken(user);
   }
