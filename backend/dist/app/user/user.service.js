@@ -37,7 +37,6 @@ let UserService = class UserService {
     }
     async login(dto) {
         const login = dto.login.trim().toLowerCase();
-        console.log(dto);
         const userEntity = await this.manager.findOneBy(user_entity_1.UserEntity, {
             login: (0, typeorm_1.ILike)(login),
         });
@@ -50,6 +49,7 @@ let UserService = class UserService {
         return user_mapper_1.MapperUser.toDto(userEntity);
     }
     async register(dto) {
+        console.log(dto);
         const login = String(dto.login).toLowerCase();
         const existingUserEntity = await this.manager.findOneBy(user_entity_1.UserEntity, {
             login: (0, typeorm_1.ILike)(login),
